@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "plugin:react/jsx-runtime",
+    "plugin:tailwindcss/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
+  ],
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+
+  "plugins": [
+    "jsx-a11y",
+    "prettier",
+    "tailwindcss",
+    "testing-library",
+    "jest-dom"
+  ],
+
+  "rules": {
+    //normal rules
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "arrow-parens": 1,
+    "semi": 1,
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "react/prop-types": "off",
+    "import/extensions": 0,
+    //prettier
+    "prettier/prettier": [
+      "warn",
+      {
+        "arrow-parens": 1
+      }
+    ],
+    //tailwind
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/enforces-shorthand": "warn",
+    "tailwindcss/migration-from-tailwind-2": "warn",
+    "tailwindcss/no-custom-classname": "warn",
+    "tailwindcss/no-contradicting-classname": "error"
+    //testing library
+  }
+}
