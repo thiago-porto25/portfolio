@@ -35,7 +35,7 @@
   "rules": {
     //normal rules
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "arrow-parens": 1,
+    "arrow-parens": 0,
     "semi": 1,
     "no-unused-vars": "warn",
     "no-console": "off",
