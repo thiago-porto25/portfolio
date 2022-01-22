@@ -2,11 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .text-type-base {
+    @apply text-gray-400 text-lg text-center;
+  }
+
+  .text-type-title {
+    @apply text-gray-500 text-3xl text-center px-8;
+  }
+
+  .text-type-work {
+    @apply font-montagu text-gray-200 text-2xl text-center;
+  }
+
+  .section-base {
+    @apply flex flex-col gap-12 justify-center items-center my-96;
+  }
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(156 163 175);
+}
+
+::selection {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+#root,
+body,
+html {
+  min-width: 100%;
+  min-height: 100%;
 }
