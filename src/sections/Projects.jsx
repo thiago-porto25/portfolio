@@ -5,7 +5,10 @@ export default function Projects({ content }) {
 
       <ul className="flex flex-col gap-6 list-none">
         {content.projectsList.map(project => (
-          <li className="list-decimal text-gray-200 hover:text-gray-400 transition-all">
+          <li
+            key={project.link}
+            className="list-decimal text-gray-200 hover:text-gray-400 transition-all"
+          >
             <a
               className="text-2xl"
               rel="noopener noreferrer"

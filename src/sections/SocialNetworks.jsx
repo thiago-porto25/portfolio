@@ -8,25 +8,19 @@ export default function SocialNetworks({ content }) {
   const [socials] = useState([
     {
       link: "https://github.com/thiago-porto25",
-      component: (
-        <GitHub className="w-9 h-9" key={0} title="My Github profile" />
-      ),
+      component: <GitHub className="w-9 h-9" title="My Github profile" />,
     },
     {
       link: "https://www.linkedin.com/in/thiago-porto-675b8320a/",
-      component: (
-        <LinkedIn className="w-9 h-9" key={1} title="My LinkedIn profile" />
-      ),
+      component: <LinkedIn className="w-9 h-9" title="My LinkedIn profile" />,
     },
     {
       link: "mailto:thiagoportodev@gmail.com",
-      component: <Mail className="w-9 h-9" key={2} title="My e-mail address" />,
+      component: <Mail className="w-9 h-9" title="My e-mail address" />,
     },
     {
       link: "https://www.upwork.com/freelancers/~0121ea51217c88aaa1",
-      component: (
-        <UpWork className="w-9 h-9" key={3} title="My UpWork profile" />
-      ),
+      component: <UpWork className="w-9 h-9" title="My UpWork profile" />,
     },
   ]);
 
@@ -38,9 +32,9 @@ export default function SocialNetworks({ content }) {
         aria-label="Social Network links list"
       >
         {socials.map(logo => (
-          <li>
+          <li key={logo.link.slice(-10)}>
             <a
-              className="transition-all fill-gray-400 hover:fill-gray-200 text-type-base"
+              className="transition-all fill-gray-200 hover:fill-gray-400 text-type-base"
               href={logo.link}
               rel="noopener noreferrer"
             >
