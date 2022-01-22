@@ -16,7 +16,7 @@
   }
 
   .section-base {
-    @apply flex flex-col gap-12 justify-center items-center my-96;
+    @apply flex flex-col gap-12 justify-center items-center py-96 bg-neutral-900;
   }
 }
 
@@ -32,13 +32,7 @@ body {
   color: #000 !important;
 }
 
-#root,
-body,
-html {
-  min-width: 100%;
-  min-height: 100%;
-}
-
+/* scrollbar */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgb(156 163 175) rgb(23 23 23);
@@ -57,4 +51,12 @@ html {
   background-color: rgb(156 163 175);
   border-radius: 20px;
   border: 3px solid rgb(23 23 23);
+}
+
+/* 3D bg */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

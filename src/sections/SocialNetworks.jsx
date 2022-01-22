@@ -34,7 +34,7 @@ export default function SocialNetworks({ content }) {
         {socials.map(logo => (
           <li key={logo.link.slice(-10)}>
             <a
-              className="transition-all fill-gray-200 hover:fill-gray-400 text-type-base"
+              className="transition-all fill-gray-300 hover:fill-gray-400 text-type-base"
               href={logo.link}
               rel="noopener noreferrer"
             >
