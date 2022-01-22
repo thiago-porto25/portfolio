@@ -5,7 +5,7 @@ import { content } from "../utils/content";
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen bg-neutral-900">
+    <div className="w-full h-full bg-neutral-900">
       <main>
         <Intro content={content.intro} />
         <Info content={content.info} />

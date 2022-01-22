@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .text-type-base {
+    @apply text-gray-400 text-lg text-center;
+  }
+
+  .text-type-title {
+    @apply text-gray-500 text-3xl text-center px-8;
+  }
+
+  .text-type-work {
+    @apply font-montagu text-gray-200 text-2xl text-center;
+  }
+
+  .section-base {
+    @apply flex flex-col gap-12 justify-center items-center my-96;
+  }
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;

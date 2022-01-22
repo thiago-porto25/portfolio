@@ -1,8 +1,12 @@
-export default function Intro() {
+export default function Intro({ content }) {
   return (
-    <div className="text-gray-400">
-      tetetetettetet <p className="text-gray-500">Test 2222 Testing</p>
-      <p className="font-montagu text-gray-200">asdasdasdasdasdasd</p>
-    </div>
+    <section
+      aria-label="hero"
+      className="flex justify-center items-center h-screen bg-slate-600"
+    >
+      <h1 className="px-4 pb-8 h-fit text-4xl font-semibold text-center md:text-5xl text-type-title">
+        {content.title}
+      </h1>
+    </section>
   );
 }
