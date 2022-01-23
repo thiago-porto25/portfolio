@@ -1,11 +1,13 @@
 export const content = {
   intro: {
-    title: "Welcome to my portfolio",
+    title: "Hi! I'm Thiago Porto!",
   },
   info: {
-    title: "Hi! I'm Thiago Porto!",
     atom: "⚛️",
-    text: "lorem ipsunaos doasmdoamsdoa msodmaosmd asodm aosdmo amsdo smaodm osmdosmdosm odmso m asd asidasm dmsodmso msodm osmdo momsodm om omsdosmodm dmsodmaśmdásm omasódm áosmdoa msdisandi uasndui nsiudnsiun ui n uinsiudn unsudnun u niasndiansdqwiari ni n in i nifnidnfid noadfn naonidnfiodnfi nidnfi dnfidn in i ndifn difn id nfi dn",
+    text: "I'm a React Front-end Developer with experience in building responsive, mobile first and scalable websites.\nI've worked with  a multitude of technologies such as Microfrontends, React, Angular, Ionic, Firebase, Redux, styled-components, Three JS, Tailwind CSS, Material UI, Chakra UI and much more.\nI make design come to life in your browser.",
+    cta: "Got any questions?",
+    ctaAnchor: "Contact me!",
+    ctaLink: "",
   },
   projects: {
     title: "Recent Projects",
