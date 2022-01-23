@@ -4,11 +4,11 @@
 
 @layer components {
   .text-type-base {
-    @apply text-gray-400 text-lg text-center;
+    @apply text-gray-300 text-lg text-center;
   }
 
   .text-type-title {
-    @apply text-gray-500 text-3xl text-center px-8;
+    @apply text-gray-400 text-3xl text-center px-8;
   }
 
   .text-type-work {
@@ -16,7 +16,7 @@
   }
 
   .section-base {
-    @apply flex flex-col gap-12 justify-center items-center py-80;
+    @apply flex flex-col gap-12 justify-center items-center py-80 w-screen;
   }
 }
 
@@ -26,6 +26,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: rgb(156 163 175);
   background-color: rgb(23 23 23);
+  overflow-x: hidden;
 }
 
 ::selection {

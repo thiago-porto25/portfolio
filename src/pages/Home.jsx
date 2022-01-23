@@ -25,7 +25,7 @@ export default function Home() {
       0.1,
       1000
     );
-    camera.position.z = 50;
+    camera.position.z = 30;
 
     // Lights
     const pointLight = new THREE.PointLight(0x555555, 1);
