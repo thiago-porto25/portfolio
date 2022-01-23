@@ -7,7 +7,7 @@ export default function Projects({ content }) {
         {content.projectsList.map(project => (
           <li
             key={project.link}
-            className="list-decimal text-gray-200 hover:text-gray-400 transition-all"
+            className="relative z-10 list-decimal text-gray-300 hover:text-gray-400 transition-all"
           >
             <a
               className="text-2xl"
