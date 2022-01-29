@@ -37,16 +37,16 @@ export default function Background() {
 
     scene.add(ambientLight, pointLight, pointLight2);
 
-    // Triangle
+    // Hex
     const tGeometry = new THREE.TorusGeometry(7, 2, 5, 5);
     const tMaterial = new THREE.MeshStandardMaterial({
       color: 0xffffff,
       metalness: 1,
       roughness: 0.6,
     });
-    const triangle = new THREE.Mesh(tGeometry, tMaterial);
-    triangle.position.z = 0;
-    scene.add(triangle);
+    const hex = new THREE.Mesh(tGeometry, tMaterial);
+    hex.position.z = -20;
+    scene.add(hex);
 
     // knot
     const nGeometry = new THREE.TorusKnotGeometry(9, 1, 23, 9, 20, 7);
@@ -140,9 +140,9 @@ export default function Background() {
     const animate = function () {
       requestAnimationFrame(animate);
 
-      triangle.rotation.x += 0.008;
-      triangle.rotation.y += 0.009;
-      triangle.rotation.z += 0.006;
+      hex.rotation.x += 0.008;
+      hex.rotation.y += 0.009;
+      hex.rotation.z += 0.006;
 
       knot.rotation.x += 0.005;
 
@@ -156,7 +156,7 @@ export default function Background() {
 
     // Create Stars, animate, add scroll listener
     document.body.onscroll = moveCamera;
-    Array(100).fill().forEach(addStar);
+    Array(150).fill().forEach(addStar);
     animate();
   }, []);
   return <canvas />;
