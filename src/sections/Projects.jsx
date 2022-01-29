@@ -13,6 +13,7 @@ export default function Projects({ content }) {
               className="block text-2xl hover:animate-wiggle"
               rel="noopener noreferrer"
               href={project.link}
+              target="_blank"
             >
               {project.name}
             </a>

@@ -40,6 +40,7 @@ export default function SocialNetworks({ content }) {
               className="transition-all fill-gray-300 hover:fill-gray-400 text-type-base"
               href={logo.link}
               rel="noopener noreferrer"
+              target="_blank"
             >
               {logo.component}
             </a>
