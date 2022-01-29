@@ -32,7 +32,10 @@ export default function SocialNetworks({ content }) {
         aria-label="Social Network links list"
       >
         {socials.map(logo => (
-          <li key={logo.link.slice(-10)}>
+          <li
+            className="transition-transform hover:-translate-y-2"
+            key={logo.link.slice(-10)}
+          >
             <a
               className="transition-all fill-gray-300 hover:fill-gray-400 text-type-base"
               href={logo.link}
