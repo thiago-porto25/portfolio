@@ -10,12 +10,11 @@ export default function Intro({ content }) {
         {content.title}
       </h1>
 
-      <span
-        aria-label="Scroll down to see more"
-        className="absolute bottom-4 left-2/4 -ml-3 rotate-90"
-      >
-        <Arrow />
-      </span>
+      <div className=" absolute bottom-5 left-2/4 -ml-3 animate-bounce">
+        <div aria-label="Scroll down to see more" className="rotate-90">
+          <Arrow />
+        </div>
+      </div>
     </section>
   );
 }
