@@ -96,27 +96,27 @@ export default function Background() {
       if (lastScrollValue > top) {
         if (top <= -1900) {
           camera.position.z += top * 0.0001;
-          camera.rotation.y += top * -0.000014;
+          camera.rotation.y += top * -0.000012;
         } else if (top <= -1000) {
           camera.position.z += top * 0.0004;
-          camera.rotation.z += top * -0.00002;
-          camera.rotation.y += top * 0.00001;
+          camera.rotation.z += top * -0.00001;
+          camera.rotation.y += top * 0.000005;
         } else {
-          camera.position.z += top * -0.0015;
-          camera.position.y += top * -0.00005;
+          camera.position.z += top * -0.001;
+          camera.position.y += top * -0.000025;
         }
       }
       if (lastScrollValue < top) {
         if (top <= -1900) {
           camera.position.z += top * -0.0001;
-          camera.rotation.y += top * 0.000016;
+          camera.rotation.y += top * 0.000012;
         } else if (top <= -1000) {
           camera.position.z += top * -0.0004;
-          camera.rotation.z += top * 0.000022;
-          camera.rotation.y += top * -0.000012;
+          camera.rotation.z += top * 0.00001;
+          camera.rotation.y += top * -0.000005;
         } else {
           camera.position.z += top * 0.001;
-          camera.position.y += top * 0.00005;
+          camera.position.y += top * 0.000025;
         }
       }
 
@@ -140,16 +140,16 @@ export default function Background() {
     const animate = function () {
       requestAnimationFrame(animate);
 
-      hex.rotation.x += 0.008;
-      hex.rotation.y += 0.009;
-      hex.rotation.z += 0.006;
+      hex.rotation.x += 0.006;
+      hex.rotation.y += 0.006;
+      hex.rotation.z += 0.002;
 
-      knot.rotation.x += 0.005;
+      knot.rotation.x += 0.001;
 
-      knot2.rotation.y += 0.02;
+      knot2.rotation.y += 0.008;
 
-      knot3.rotation.y += 0.03;
-      knot3.rotation.z += 0.01;
+      knot3.rotation.y += 0.009;
+      knot3.rotation.z += 0.008;
 
       renderer.render(scene, camera);
     };

@@ -3,11 +3,10 @@ export const content = {
     title: "Hi! I'm Thiago Porto!",
   },
   info: {
-    atom: "⚛️",
-    text: "I'm a React Front-end Developer with experience in building responsive, mobile first and scalable websites.\nI've worked with  a multitude of technologies such as Microfrontends, React, Angular, Ionic, Firebase, Redux, styled-components, Three JS, Tailwind CSS, Material UI, Chakra UI and much more.\nI make design come to life in your browser.",
+    text: "I'm a React Front-end Developer with experience in building responsive, mobile first and scalable websites.\nI've worked with  a multitude of technologies such as Microfrontends, React, Angular, Ionic, Firebase, Redux, styled-components, Three JS, Tailwind CSS, Material UI, Chakra UI and much more.\n\nI make design come to life in your browser.",
     cta: "Got any questions?",
     ctaAnchor: "Contact me!",
-    ctaLink: "",
+    ctaLink: "mailto:thiagoportodev@gmail.com",
   },
   projects: {
     title: "Recent Projects",
