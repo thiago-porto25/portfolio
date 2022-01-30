@@ -1,9 +1,8 @@
-name: Push Container to Heroku
+name: Push Container to Heroku and release it
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
 
 jobs:
   build:
