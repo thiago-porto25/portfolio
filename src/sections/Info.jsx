@@ -6,7 +6,7 @@ export default function Info({ content }) {
     <section aria-label="info section" className="section-base">
       <h2 className="text-5xl text-type-title">
         <span
-          className="flex justify-center items-start pb-2 animate-spin-slow"
+          className="flex justify-center items-start animate-spin-slow"
           aria-label="rotating atom emoji"
         >
           <FadeUp>
