@@ -23,8 +23,10 @@ export default function Info({ content }) {
         <FadeUp>
           {content.cta}{" "}
           <a
-            className="hover:text-gray-400 transition-colors"
+            className="hover:text-gray-400 underline transition-colors"
             href={content.ctaLink}
+            target="_blank"
+            rel="noreferrer"
           >
             {content.ctaAnchor}
           </a>
