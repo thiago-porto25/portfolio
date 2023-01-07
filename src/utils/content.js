@@ -3,7 +3,7 @@ export const content = {
     title: "Hi! I'm Thiago Porto!",
   },
   info: {
-    text: "I'm a React Front-end Developer with experience in building responsive, mobile first and scalable websites.\n\nI've worked with  a multitude of technologies such as Microfrontends, React, Angular, Ionic, Firebase, Redux, styled-components, Three JS, Tailwind CSS, Material UI, Chakra UI and much more.\n\nI make design come to life in your browser.",
+    text: "I'm a Front-end Developer with experience in building responsive, mobile first, performant, scalable and SEO friendly applications.\n\nI've worked with a multitude of technologies such as React, React Native, Angular, Microfrontends, Storybook, Redux, NgRx, Cypress, Jest and much more.\n\nI make design come to life in your browser.",
     cta: "Got any questions?",
     ctaAnchor: "Contact me!",
     ctaLink: "mailto:thiagoportodev@gmail.com",
@@ -11,18 +11,21 @@ export const content = {
   projects: {
     title: "Recent Projects",
     projectsList: [
-      { name: "D3 website", link: "https://d3.do/" },
+      {
+        name: "Paciente Sírio-Libanês",
+        link: "https://play.google.com/store/apps/details?id=br.org.hsl.siriolibanes",
+      },
+      {
+        name: "Minim-ui",
+        link: "https://www.npmjs.com/package/@thiagoporto/minim-ui",
+      },
+      { name: "ChatRandom", link: "https://chat-random.vercel.app/" },
+      {
+        name: "Comgás Virtual",
+        link: "https://virtual.comgas.com.br/contratecasas",
+      },
+      { name: "D3", link: "https://history.d3.do/" },
       { name: "Postr", link: "https://postr-react-app.web.app/" },
-      { name: "NoteMe", link: "https://noteme-43c39.firebaseapp.com/login" },
-      {
-        name: "Find Wally",
-        link: "https://find-wally-4e3a1.firebaseapp.com/",
-      },
-      { name: "Music Store", link: "https://music-store-9cab8.web.app/" },
-      {
-        name: "Tic Tac Toe",
-        link: "https://thiago-porto25.github.io/tic-tac-toe/",
-      },
     ],
   },
   social: {
