@@ -1,21 +1,37 @@
 # Thiago Porto's Portfolio
 
-This is my 3D portfolio website. I've coupled React with Three JS and Tailwind CSS to create the UI. Feel free to fork it and play around with it.
+[![CI](https://github.com/thiago-porto25/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/thiago-porto25/portfolio/actions/workflows/ci.yml)
 
-If you like what you see and would like to contact me send an email at thiagoportodev@gmail.com!
+Live: [www.thiagoportodev.me](https://www.thiagoportodev.me)
 
-## Tecnologies
+A 3D portfolio built with React, TypeScript, Vite, Three.js, Framer Motion and Tailwind CSS. The page is pre-rendered to static HTML at build time (`vite-react-ssg`) and hydrated on the client.
 
-### React
+## Running locally
 
-React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable and easier to debug.
-<br/><br/>
-Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+```bash
+npm install
+npm run dev        # dev server on http://localhost:5173
+npm test           # unit tests (Vitest)
+npm run lint
+npm run typecheck
+npm run build      # pre-rendered static build in ./dist
+npm run preview    # serve ./dist locally
+```
 
-### Three JS
+## How it works
 
-Three JS is an easy to use, lightweight, cross-browser, general purpose 3D library. The current builds only include a WebGL renderer but WebGPU (experimental), SVG and CSS3D renderers are also available in the examples.
+- `src/utils/content.ts` holds all the text and links shown on the page.
+- `src/components/Background.tsx` is the Three.js scene. It is lazy-loaded, follows the scroll position, pauses when the tab is hidden, and stays still when the user prefers reduced motion or WebGL is unavailable.
+- `src/sections/*` are the page sections, composed in `src/pages/Home.jsx`.
 
-### Tailwind CSS
+## CI
 
-A utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center` and `rotate-90` that can be composed to build any design, directly in your markup.
+`.github/workflows/ci.yml` runs lint, typecheck, tests and the build on every PR and push to `main`, then Lighthouse CI (`lighthouserc.json`) against `dist/`. Accessibility, best practices and SEO must score ≥ 95; performance only warns because headless CI renders WebGL in software.
+
+## Deploy
+
+Deployed on [Vercel](https://vercel.com) through its Git integration: every push to `main` builds (`npm run build`) and publishes `dist/` automatically.
+
+## License
+
+[MIT](LICENSE)

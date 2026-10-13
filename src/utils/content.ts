@@ -1,0 +1,192 @@
+import agriness from "../assets/projects/agriness.webp";
+import comgas from "../assets/projects/comgas.webp";
+import hsl from "../assets/projects/hsl.webp";
+
+export const content = {
+  nav: {
+    skip: "Skip to content",
+    links: [
+      { label: "Projects", href: "#projects" },
+      { label: "Experience", href: "#experience" },
+      { label: "Skills", href: "#skills" },
+      { label: "Contact", href: "#contact" },
+    ],
+  },
+  intro: {
+    title: "Hi! I'm Thiago Porto!",
+    subtitle: "Frontend Engineer",
+    pitch:
+      "I build fast, polished React and React Native interfaces, and work with AI agents while staying in charge of architecture, tests and code review.",
+    ctas: [
+      { label: "View projects", href: "#projects" },
+      { label: "Contact me", href: "#contact" },
+    ],
+  },
+  experience: {
+    title: "Experience",
+    jobs: [
+      {
+        role: "Frontend Engineer",
+        company: "NTConsult",
+        period: "Jan 2025 – Present",
+        bullets: [
+          {
+            lead: "Frontend leadership",
+            text: "Led the frontend team on Agriness, a platform used by thousands of pig farms, setting the standards for best practices and code quality and implementing internationalization to serve multiple languages.",
+          },
+          {
+            lead: "AI-assisted delivery",
+            text: "Defined the conventions, reusable skills and context files that guide AI coding agents in the codebase, making frontend deliveries with AI 80% faster.",
+          },
+          {
+            lead: "Flagship rebuild",
+            text: "Delivered the new version of the company's flagship software, rebuilt from scratch with React and its ecosystem, raising user satisfaction by 85% over the outdated, bug-prone legacy version.",
+          },
+        ],
+      },
+      {
+        role: "Frontend Engineer",
+        company: "Igma",
+        period: "Dec 2022 – Jan 2025",
+        bullets: [
+          {
+            lead: "Conversion funnel",
+            text: "Led the frontend implementation of the gas contracting flow in Comgás Virtual, a key funnel for converting visitors into new customers.",
+          },
+          {
+            lead: "Hospital patient app",
+            text: "On the Sírio-Libanês React Native app, introduced over-the-air deployments so fixes and JavaScript-only features skip slow app store reviews, built a native bridge to the Meridian SDK for indoor routing, and delivered scheduling for exams, appointments and telemedicine, adding a new revenue channel for the hospital.",
+          },
+          {
+            lead: "Quality and mentoring",
+            text: "Mentored other frontend developers, guided architectural decisions and built a testing culture with unit and E2E tests (Detox, Gherkin), raising coverage to 85%.",
+          },
+        ],
+      },
+      {
+        role: "Frontend Engineer",
+        company: "D3 Company",
+        period: "Dec 2021 – Dec 2022",
+        bullets: [
+          {
+            lead: "Website rebuild",
+            text: "Rebuilt the company website from scratch with React and microfrontends, delivered in 3 months.",
+          },
+          {
+            lead: "Testing",
+            text: "Introduced automated E2E tests with Cypress and Cucumber, with scenarios written in plain language, and raised unit and E2E test coverage to 90%.",
+          },
+          {
+            lead: "Redux refactor",
+            text: "Led a refactor of state management, improving performance and predictability.",
+          },
+        ],
+      },
+    ],
+  },
+  skills: {
+    title: "Skills",
+    groups: [
+      {
+        name: "Frontend",
+        items: [
+          "React",
+          "React Native",
+          "Next.js",
+          "TypeScript",
+          "Redux",
+          "Storybook",
+          "Microfrontends",
+        ],
+      },
+      {
+        name: "Testing",
+        items: [
+          "Jest",
+          "Cypress",
+          "Cucumber / Gherkin",
+          "Detox",
+          "Unit & E2E testing",
+        ],
+      },
+      {
+        name: "Practices",
+        items: [
+          "Agile",
+          "Responsive design",
+          "Accessibility",
+          "Mentorship",
+          "Code review",
+          "AI-assisted development",
+        ],
+      },
+    ],
+  },
+  projects: {
+    title: "Selected Projects",
+    featured: [
+      {
+        name: "Agriness S4",
+        role: "Frontend Engineer · Frontend Lead",
+        description:
+          "Real-time management platform for swine production, used by farms to track performance. I led the frontend team, set the code standards, built internationalization and introduced an AI-assisted workflow.",
+        stack: ["React", "TypeScript"],
+        image: agriness,
+        alt: "Agriness S4 landing page: swine production management in real time",
+        link: "https://agriness.com/s4/",
+        linkLabel: "Visit Agriness S4",
+      },
+      {
+        name: "Paciente Sírio-Libanês",
+        role: "Frontend Engineer",
+        description:
+          "Patient app of the Sírio-Libanês hospital. I introduced over-the-air deployments, built the native bridge to the Meridian SDK for indoor routing and delivered scheduling for exams, appointments and telemedicine.",
+        stack: ["React Native", "TypeScript"],
+        image: hsl,
+        alt: "Three screens of the Paciente Sírio-Libanês app: welcome, appointment scheduling and exam results",
+        link: "https://play.google.com/store/apps/details?id=br.org.hsl.siriolibanes",
+        linkLabel: "View on Google Play",
+      },
+      {
+        name: "Comgás Virtual",
+        role: "Frontend Engineer",
+        description:
+          "Self-service portal of Comgás, a natural gas distributor. I led the frontend of the gas contracting flow, a key funnel for turning visitors into new customers.",
+        stack: ["React", "TypeScript"],
+        image: comgas,
+        alt: "Comgás Virtual home page with the customer services and bills area",
+        link: "https://virtual.comgas.com.br/contratecasas",
+        linkLabel: "Visit Comgás Virtual",
+      },
+    ],
+    moreTitle: "More projects",
+    projectsList: [
+      {
+        name: "Minim-ui",
+        link: "https://www.npmjs.com/package/@thiagoporto/minim-ui",
+      },
+      { name: "ChatRandom", link: "https://chat-random.vercel.app/" },
+      { name: "Postr", link: "https://postr-react-app.web.app/" },
+    ],
+  },
+  social: {
+    title: "Let's talk!",
+    text: "Have a project or an opportunity in mind? My inbox is open.",
+    email: "thiagoportodev@gmail.com",
+    links: [
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/thiago-porto-675b8320a/",
+      },
+      { label: "GitHub", href: "https://github.com/thiago-porto25" },
+    ],
+  },
+  footer: {
+    text: "© Thiago Porto. All Rights Reserved.",
+    built: "Built with React, TypeScript and Three.js ·",
+    source: "source on GitHub",
+    sourceLink: "https://github.com/thiago-porto25/portfolio",
+  },
+};
+
+export type Content = typeof content;

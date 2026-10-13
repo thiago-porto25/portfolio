@@ -1,6 +1,9 @@
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
-export default function FadeUp({ timeout, children }) {
+type FadeUpProps = { timeout?: number; children: ReactNode };
+
+export default function FadeUp({ timeout, children }: FadeUpProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
