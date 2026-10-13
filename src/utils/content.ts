@@ -166,7 +166,6 @@ export const content = {
         link: "https://www.npmjs.com/package/@thiagoporto/minim-ui",
       },
       { name: "ChatRandom", link: "https://chat-random.vercel.app/" },
-      { name: "D3", link: "https://history.d3.do/" },
       { name: "Postr", link: "https://postr-react-app.web.app/" },
     ],
   },
