@@ -1,15 +1,16 @@
 export const content = {
   intro: {
     title: "Hi! I'm Thiago Porto!",
+    subtitle: "Front-end Developer · React ecosystem",
   },
   info: {
-    text: "I'm a Front-end Developer with experience in building responsive, mobile first, performant, scalable and SEO friendly applications.\n\nI've worked with a multitude of technologies such as React, React Native, Angular, Microfrontends, Storybook, Redux, NgRx, Cypress, Jest and much more.\n\nI make design come to life in your browser.",
-    cta: "Got any questions?",
-    ctaAnchor: "Contact me!",
+    text: "I'm a Front-end Developer specialized in the React ecosystem. I build responsive, mobile-first, performant and SEO-friendly applications for the web and for mobile.\n\nMy day-to-day is React and React Native, with Redux for state, Storybook for component libraries, Microfrontends to scale across teams, and Jest and Cypress to keep it all tested.\n\nI also work with AI agents as part of my development workflow: they speed up the repetitive parts while I stay in charge of architecture, tests and code review.\n\nI like turning designs into fast, polished interfaces.",
+    cta: "Have a project or an opportunity in mind?",
+    ctaAnchor: "Let's talk!",
     ctaLink: "mailto:thiagoportodev@gmail.com",
   },
   projects: {
-    title: "Recent Projects",
+    title: "Selected Projects",
     projectsList: [
       {
         name: "Paciente Sírio-Libanês",
@@ -29,7 +30,7 @@ export const content = {
     ],
   },
   social: {
-    title: "My Social Networks!",
+    title: "Find me online",
   },
   footer: {
     text: "© Thiago Porto. All Rights Reserved.",

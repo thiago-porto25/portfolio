@@ -9,9 +9,12 @@ export default function Intro({ content }: Props) {
       aria-label="Intro Section"
       className="relative flex h-screen items-center justify-center"
     >
-      <h1 className="text-type-title h-fit px-4 pb-8 text-center text-4xl font-semibold md:text-5xl">
-        {content.title}
-      </h1>
+      <div className="flex flex-col items-center gap-4 px-4 pb-8">
+        <h1 className="text-type-title h-fit text-center text-4xl font-semibold md:text-5xl">
+          {content.title}
+        </h1>
+        <p className="text-type-base">{content.subtitle}</p>
+      </div>
 
       <div className=" absolute bottom-5 left-2/4 -ml-3 animate-bounce motion-reduce:animate-none">
         <div
