@@ -11,6 +11,10 @@
     @apply text-gray-400 text-3xl text-center px-8;
   }
 
+  .text-panel {
+    @apply rounded-2xl bg-black/50 py-4;
+  }
+
   .section-base {
     @apply flex flex-col gap-12 justify-center items-center py-80 w-screen;
   }

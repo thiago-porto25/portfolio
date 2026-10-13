@@ -6,12 +6,12 @@ type Props = { content: Content["projects"] };
 export default function Projects({ content }: Props) {
   return (
     <section aria-label="projects section" className="section-base">
-      <h2 className="text-type-title">
+      <h2 className="text-type-title text-panel">
         <FadeUp>{content.title}</FadeUp>
       </h2>
 
       <FadeUp>
-        <ul className="flex list-none flex-col gap-6">
+        <ul className="text-panel flex list-none flex-col gap-6 px-12">
           {content.projectsList.map(project => (
             <li
               key={project.link}

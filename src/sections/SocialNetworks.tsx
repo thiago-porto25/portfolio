@@ -8,12 +8,12 @@ type Props = { content: Content["social"] };
 export default function SocialNetworks({ content }: Props) {
   return (
     <section className="section-base">
-      <h3 className="text-type-title">
+      <h3 className="text-type-title text-panel">
         <FadeUp>{content.title}</FadeUp>
       </h3>
       <FadeUp>
         <ul
-          className="flex list-none gap-10"
+          className="text-panel flex list-none gap-10 px-12"
           aria-label="Social Network links list"
         >
           {socialsComponents.map(logo => (
