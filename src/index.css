@@ -12,7 +12,7 @@
   }
 
   .text-panel {
-    @apply rounded-2xl bg-black/50 py-4;
+    @apply rounded-2xl bg-black/75 py-4 backdrop-blur-sm;
   }
 
   .section-base {
