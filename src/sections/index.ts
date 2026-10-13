@@ -1,5 +1,4 @@
 export { default as Experience } from "./Experience";
-export { default as Impact } from "./Impact";
 export { default as Info } from "./Info";
 export { default as Intro } from "./Intro";
 export { default as Projects } from "./Projects";

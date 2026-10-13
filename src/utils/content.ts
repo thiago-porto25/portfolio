@@ -20,11 +20,6 @@ export const content = {
   info: {
     text: "I'm a Frontend Engineer specialized in the React ecosystem. I build responsive, mobile-first, performant and SEO-friendly applications for the web and for mobile.\n\nMy day-to-day is React, TypeScript and Next.js, plus React Native for mobile, with Redux for state, Storybook for component libraries, Microfrontends to scale across teams, and Jest and Cypress to keep it all tested.\n\nI also work with AI agents as part of my development workflow: they speed up the repetitive parts while I stay in charge of architecture, tests and code review.\n\nI like turning designs into fast, polished interfaces.",
   },
-  impact: [
-    { value: "70%", label: "faster AI-assisted frontend delivery" },
-    { value: "90%", label: "unit + E2E test coverage" },
-    { value: "1,000s", label: "of agriculture companies on Agriness" },
-  ],
   experience: {
     title: "Experience",
     jobs: [
