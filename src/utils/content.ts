@@ -19,9 +19,6 @@ export const content = {
   },
   info: {
     text: "I'm a Frontend Engineer specialized in the React ecosystem. I build responsive, mobile-first, performant and SEO-friendly applications for the web and for mobile.\n\nMy day-to-day is React, TypeScript and Next.js, plus React Native for mobile, with Redux for state, Storybook for component libraries, Microfrontends to scale across teams, and Jest and Cypress to keep it all tested.\n\nI also work with AI agents as part of my development workflow: they speed up the repetitive parts while I stay in charge of architecture, tests and code review.\n\nI like turning designs into fast, polished interfaces.",
-    cta: "Have a project or an opportunity in mind?",
-    ctaAnchor: "Let's talk!",
-    ctaLink: "mailto:thiagoportodev@gmail.com",
   },
   impact: [
     { value: "70%", label: "faster AI-assisted frontend delivery" },
@@ -165,10 +162,22 @@ export const content = {
     ],
   },
   social: {
-    title: "Find me online",
+    title: "Let's talk!",
+    text: "Have a project or an opportunity in mind? My inbox is open.",
+    email: "thiagoportodev@gmail.com",
+    links: [
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/thiago-porto-675b8320a/",
+      },
+      { label: "GitHub", href: "https://github.com/thiago-porto25" },
+    ],
   },
   footer: {
     text: "© Thiago Porto. All Rights Reserved.",
+    built: "Built with React, TypeScript and Three.js ·",
+    source: "source on GitHub",
+    sourceLink: "https://github.com/thiago-porto25/portfolio",
   },
 };
 

@@ -13,9 +13,7 @@ export default function Impact({ content }: Props) {
         <ul className="text-panel flex list-none flex-col gap-6 px-8 md:flex-row md:gap-12">
           {content.map(item => (
             <li key={item.value} className="text-center">
-              <p className="text-4xl font-semibold text-gray-100">
-                {item.value}
-              </p>
+              <p className="text-4xl font-semibold text-accent">{item.value}</p>
               <p className="max-w-48 text-sm text-gray-300">{item.label}</p>
             </li>
           ))}

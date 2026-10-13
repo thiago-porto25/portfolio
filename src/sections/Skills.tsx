@@ -25,7 +25,7 @@ export default function Skills({ content }: Props) {
                 {group.items.map(item => (
                   <li
                     key={item}
-                    className="rounded-full border border-gray-500 px-3 py-1 text-sm text-gray-300"
+                    className="rounded-full border border-accent/50 px-3 py-1 text-sm text-gray-300"
                   >
                     {item}
                   </li>

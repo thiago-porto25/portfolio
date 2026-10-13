@@ -172,9 +172,21 @@ export default function Background() {
       camera.rotation.y = pose.rotY;
     };
 
+    // Subtle mouse parallax (fine pointers only, off with reduced motion)
+    let mouseX = 0;
+    let offsetX = 0;
+    const onMouse = (e: MouseEvent) => {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 4;
+    };
+    if (window.matchMedia("(pointer: fine)").matches) {
+      window.addEventListener("mousemove", onMouse, { passive: true });
+    }
+
     let frame = 0;
     const tick = () => {
       if (!reducedMotion.matches) {
+        offsetX += (mouseX - offsetX) * 0.05;
+        camera.position.x = offsetX;
         hex.rotation.x += 0.006;
         hex.rotation.y += 0.006;
         hex.rotation.z += 0.002;
@@ -213,6 +225,7 @@ export default function Background() {
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", moveCamera);
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("mousemove", onMouse);
       document.removeEventListener("visibilitychange", onVisibility);
       reducedMotion.removeEventListener("change", start);
       scene.traverse(obj => {

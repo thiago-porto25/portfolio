@@ -25,7 +25,7 @@ export default function Experience({ content }: Props) {
               <ul className="mt-3 list-disc space-y-2 pl-5 text-gray-300">
                 {job.bullets.map(bullet => (
                   <li key={bullet.lead}>
-                    <strong className="font-semibold text-gray-100">
+                    <strong className="font-semibold text-accent">
                       {bullet.lead}
                     </strong>
                     {" — "}

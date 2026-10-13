@@ -2,6 +2,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: { accent: "#f0509a" },
       animation: {
         "spin-slow": "spin 5s linear infinite",
         wiggle: "wiggle 0.3s ease-in-out normal",

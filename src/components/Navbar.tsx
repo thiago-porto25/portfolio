@@ -7,6 +7,22 @@ type Props = { content: Content["nav"] };
 export default function Navbar({ content }: Props) {
   // Hide on scroll down (more room on small screens), show on scroll up
   const [hidden, setHidden] = useState(false);
+  const [active, setActive] = useState("");
+  useEffect(() => {
+    const ids = content.links.map(l => l.href.slice(1));
+    const io = new IntersectionObserver(
+      entries =>
+        entries.forEach(e => {
+          if (e.isIntersecting) setActive(e.target.id);
+        }),
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+    return () => io.disconnect();
+  }, [content.links]);
   useEffect(() => {
     let last = window.scrollY;
     const onScroll = () => {
@@ -36,7 +52,12 @@ export default function Navbar({ content }: Props) {
           {content.links.map(link => (
             <li key={link.href}>
               <a
-                className="transition-colors hover:text-white"
+                className={`transition-colors hover:text-white ${
+                  active === link.href.slice(1) ? "text-accent" : ""
+                }`}
+                aria-current={
+                  active === link.href.slice(1) ? "true" : undefined
+                }
                 href={link.href}
               >
                 {link.label}

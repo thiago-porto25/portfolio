@@ -26,20 +26,6 @@ export default function Info({ content }: Props) {
       <div className="text-type-base text-panel w-full whitespace-pre-wrap px-8 md:w-3/6 md:px-6">
         <FadeUp>{content.text}</FadeUp>
       </div>
-
-      <div className="text-type-base text-panel -mt-3 w-full px-8 md:w-3/6 md:px-6">
-        <FadeUp>
-          {content.cta}{" "}
-          <a
-            className="underline transition-colors hover:text-gray-400"
-            href={content.ctaLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {content.ctaAnchor}
-          </a>
-        </FadeUp>
-      </div>
     </section>
   );
 }
