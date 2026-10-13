@@ -11,10 +11,6 @@
     @apply text-gray-400 text-3xl text-center px-8;
   }
 
-  .text-type-work {
-    @apply font-montagu text-gray-200 text-2xl text-center;
-  }
-
   .section-base {
     @apply flex flex-col gap-12 justify-center items-center py-80 w-screen;
   }

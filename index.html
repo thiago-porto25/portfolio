@@ -13,6 +13,8 @@
     <meta name="msapplication-TileImage" content="/favicon/logo152.png" />
     <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
 
+    <link rel="canonical" href="https://www.thiagoportodev.me/" />
+
     <!-- OG tags -->
     <meta property="og:title" content="Thiago Porto's Portfolio" />
     <meta property="og:type" content="website" />
@@ -20,7 +22,14 @@
       property="og:description"
       content="Thiago Porto is a React Frontend Web Developer experienced in delivering responsive and scalable websites. Come see his newest creation!"
     />
-    <meta property="og:image" content="/ogImage.png" />
+    <meta
+      property="og:image"
+      content="https://www.thiagoportodev.me/ogImage.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:image:alt" content="Thiago Porto, Front-end Developer" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://www.thiagoportodev.me" />
     <meta property="og:site_name" content="thiagoportodev.me" />
 
@@ -31,7 +40,10 @@
       property="twitter:description"
       content="Thiago Porto is a React Frontend Web Developer experienced in delivering responsive and scalable websites. Come see his newest creation!"
     />
-    <meta property="twitter:image" content="/ogImage.png" />
+    <meta
+      property="twitter:image"
+      content="https://www.thiagoportodev.me/ogImage.png"
+    />
     <meta property="twitter:url" content="https://www.thiagoportodev.me" />
 
     <!-- Favicons -->
@@ -42,19 +54,36 @@
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thiago Porto",
+        "jobTitle": "Front-end Developer",
+        "url": "https://www.thiagoportodev.me/",
+        "sameAs": [
+          "https://github.com/thiago-porto25",
+          "https://www.linkedin.com/in/thiago-porto-675b8320a/"
+        ]
+      }
+    </script>
 
     <!-- Title -->
     <title>Thiago Porto's Portfolio</title>
   </head>
   <body>
-    <noscript>Thiago Porto, Front-end Engineer. Enable JavaScript to see the 3D portfolio.</noscript>
+    <noscript>
+      <h1>Thiago Porto, Front-end Developer</h1>
+      <p>
+        <a href="https://github.com/thiago-porto25">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/thiago-porto-675b8320a/"
+          >LinkedIn</a
+        >
+        ·
+        <a href="mailto:thiagoportodev@gmail.com">thiagoportodev@gmail.com</a>
+      </p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
