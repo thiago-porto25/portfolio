@@ -1,21 +1,29 @@
 # Thiago Porto's Portfolio
 
-This is my 3D portfolio website. I've coupled React with Three JS and Tailwind CSS to create the UI. Feel free to fork it and play around with it.
+Live: [www.thiagoportodev.me](https://www.thiagoportodev.me)
 
-If you like what you see and would like to contact me send an email at thiagoportodev@gmail.com!
+A 3D portfolio built with React, Three.js, Framer Motion and Tailwind CSS.
 
-## Tecnologies
+## Running locally
 
-### React
+```bash
+npm install
+npm start      # dev server on http://localhost:3000
+npm test       # unit tests
+npm run lint
+npm run build  # production build in ./build
+```
 
-React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable and easier to debug.
-<br/><br/>
-Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+## How it works
 
-### Three JS
+- `src/utils/content.js` holds all the text and links shown on the page.
+- `src/components/Background.jsx` is the Three.js scene. It is lazy-loaded, follows the scroll position, pauses when the tab is hidden, and stays still when the user prefers reduced motion or WebGL is unavailable.
+- `src/sections/*` are the page sections, composed in `src/pages/Home.jsx`.
 
-Three JS is an easy to use, lightweight, cross-browser, general purpose 3D library. The current builds only include a WebGL renderer but WebGPU (experimental), SVG and CSS3D renderers are also available in the examples.
+## Deploy
 
-### Tailwind CSS
+Deployed on [Vercel](https://vercel.com) through its Git integration: every push to `main` builds and publishes automatically.
 
-A utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center` and `rotate-90` that can be composed to build any design, directly in your markup.
+## License
+
+[MIT](LICENSE)

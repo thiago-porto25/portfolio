@@ -3,3 +3,11 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
+
+// jsdom has no IntersectionObserver (used by framer-motion's whileInView).
+// Plain functions, because CRA resets jest.fn() implementations between tests.
+global.IntersectionObserver = function IntersectionObserver() {
+  this.observe = () => {};
+  this.unobserve = () => {};
+  this.disconnect = () => {};
+};

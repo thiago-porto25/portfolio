@@ -3,11 +3,6 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "^8.11.1",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "eslint-plugin-jest-dom": "^4.0.1",
     "framer-motion": "^6.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -35,9 +30,14 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.2",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest-dom": "^4.0.1",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-tailwindcss": "^3.2.0",

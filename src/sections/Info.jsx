@@ -15,11 +15,11 @@ export default function Info({ content }) {
         </span>
       </h2>
 
-      <p className="px-8 w-full whitespace-pre-wrap md:px-0 md:w-3/6 text-type-base">
+      <div className="px-8 w-full whitespace-pre-wrap md:px-0 md:w-3/6 text-type-base">
         <FadeUp>{content.text}</FadeUp>
-      </p>
+      </div>
 
-      <p className="px-8 -mt-3 w-full md:px-0 md:w-3/6 text-type-base">
+      <div className="px-8 -mt-3 w-full md:px-0 md:w-3/6 text-type-base">
         <FadeUp>
           {content.cta}{" "}
           <a
@@ -31,7 +31,7 @@ export default function Info({ content }) {
             {content.ctaAnchor}
           </a>
         </FadeUp>
-      </p>
+      </div>
     </section>
   );
 }
