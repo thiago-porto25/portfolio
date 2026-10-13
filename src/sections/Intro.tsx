@@ -7,7 +7,7 @@ export default function Intro({ content }: Props) {
   return (
     <section
       aria-label="Intro Section"
-      className="relative flex h-screen animate-initial items-center justify-center motion-reduce:animate-none"
+      className="relative flex h-screen items-center justify-center"
     >
       <h1 className="text-type-title h-fit px-4 pb-8 text-center text-4xl font-semibold md:text-5xl">
         {content.title}
