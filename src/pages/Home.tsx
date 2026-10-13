@@ -30,9 +30,9 @@ export default function Home() {
       <main id="main" className="absolute z-10">
         <Intro content={content.intro} />
         <Info content={content.info} />
+        <Projects content={content.projects} />
         <Experience content={content.experience} />
         <Skills content={content.skills} />
-        <Projects content={content.projects} />
         <SocialNetworks content={content.social} />
         <Footer content={content.footer} />
       </main>

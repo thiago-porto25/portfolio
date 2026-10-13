@@ -7,9 +7,9 @@ export const content = {
     skip: "Skip to content",
     links: [
       { label: "About", href: "#about" },
+      { label: "Projects", href: "#projects" },
       { label: "Experience", href: "#experience" },
       { label: "Skills", href: "#skills" },
-      { label: "Projects", href: "#projects" },
       { label: "Contact", href: "#contact" },
     ],
   },
