@@ -10,7 +10,8 @@ export default function Info({ content }: Props) {
       <h2 className="text-type-title text-5xl">
         <span
           className="flex animate-spin-slow items-start justify-center"
-          aria-label="rotating atom emoji"
+          role="img"
+          aria-label="Rotating atom"
         >
           <FadeUp>
             <Atom />

@@ -14,7 +14,11 @@ export default function Intro({ content }: Props) {
       </h1>
 
       <div className=" absolute bottom-5 left-2/4 -ml-3 animate-bounce motion-reduce:animate-none">
-        <div aria-label="Scroll down to see more" className="rotate-90">
+        <div
+          role="img"
+          aria-label="Scroll down to see more"
+          className="rotate-90"
+        >
           <Arrow />
         </div>
       </div>
