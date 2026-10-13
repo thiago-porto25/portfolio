@@ -34,7 +34,7 @@ export const content = {
           "Led the frontend team on Agriness, a platform used by thousands of agriculture companies, setting the standards for best practices and code quality.",
           "Implemented internationalization, making the product available in multiple languages.",
           "Created the AI Skills and CLAUDE.md that guide agents in the codebase, making frontend deliveries with AI 70% faster.",
-          "Delivered the first release of a new corporate website, recognized for its performance and scalability.",
+          "Delivered the new version of the company's flagship software, rebuilt from scratch with React and its ecosystem, raising user satisfaction by 85% over the outdated, bug-prone legacy version.",
         ],
       },
       {
