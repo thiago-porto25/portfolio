@@ -7,10 +7,10 @@ type Props = { content: Content["social"] };
 
 export default function SocialNetworks({ content }: Props) {
   return (
-    <section className="section-base">
-      <h3 className="text-type-title text-panel">
+    <section id="contact" className="section-base scroll-mt-20">
+      <h2 className="text-type-title text-panel">
         <FadeUp>{content.title}</FadeUp>
-      </h3>
+      </h2>
       <FadeUp>
         <ul
           className="text-panel flex list-none gap-10 px-12"

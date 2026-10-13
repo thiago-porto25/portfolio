@@ -14,6 +14,21 @@ export default function Intro({ content }: Props) {
           {content.title}
         </h1>
         <p className="text-type-base">{content.subtitle}</p>
+        <div className="flex gap-3 pt-2">
+          {content.ctas.map((cta, i) => (
+            <a
+              key={cta.href}
+              href={cta.href}
+              className={
+                i === 0
+                  ? "rounded-full bg-gray-200 px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-white"
+                  : "rounded-full border border-gray-400 px-5 py-2 text-sm font-semibold text-gray-200 transition-colors hover:border-white hover:text-white"
+              }
+            >
+              {cta.label}
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className=" absolute bottom-5 left-2/4 -ml-3 animate-bounce motion-reduce:animate-none">

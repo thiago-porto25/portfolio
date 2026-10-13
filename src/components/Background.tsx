@@ -25,6 +25,10 @@ import { useEffect, useRef } from "react";
 // values were tuned against (assumed); raise it to make the camera move less.
 const SCROLL_STEP = 20;
 
+// The camera path was tuned for a page ~3100px long. Map the scroll progress
+// onto that length so adding content does not push the camera past the shapes.
+const JOURNEY = 3100;
+
 // Integral of (rate * u) over [from, to], clamped to the current depth u.
 const seg = (u: number, from: number, to: number, rate: number) => {
   const m = Math.min(Math.max(u, from), to);
@@ -150,7 +154,10 @@ export default function Background() {
 
     const moveCamera = () => {
       if (reducedMotion.matches) return;
-      const pose = cameraPose(Math.max(window.scrollY, 0));
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress =
+        max > 0 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 0;
+      const pose = cameraPose(progress * JOURNEY);
       camera.position.z = pose.z;
       camera.position.y = pose.y;
       camera.rotation.z = pose.rotZ;

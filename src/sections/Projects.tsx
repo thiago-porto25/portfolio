@@ -5,7 +5,11 @@ type Props = { content: Content["projects"] };
 
 export default function Projects({ content }: Props) {
   return (
-    <section aria-label="projects section" className="section-base">
+    <section
+      id="projects"
+      aria-label="projects section"
+      className="section-base scroll-mt-20"
+    >
       <h2 className="text-type-title text-panel">
         <FadeUp>{content.title}</FadeUp>
       </h2>

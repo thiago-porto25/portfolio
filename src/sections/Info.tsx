@@ -6,7 +6,11 @@ type Props = { content: Content["info"] };
 
 export default function Info({ content }: Props) {
   return (
-    <section aria-label="info section" className="section-base">
+    <section
+      id="about"
+      aria-label="info section"
+      className="section-base scroll-mt-20"
+    >
       <h2 className="text-type-title text-5xl">
         <span
           className="flex animate-spin-slow items-start justify-center"
