@@ -34,7 +34,7 @@ export const content = {
           },
           {
             lead: "AI-assisted delivery",
-            text: "Defined the conventions, reusable skills and context files that guide AI coding agents in the codebase, making frontend deliveries with AI 70% faster.",
+            text: "Defined the conventions, reusable skills and context files that guide AI coding agents in the codebase, making frontend deliveries with AI 80% faster.",
           },
           {
             lead: "Flagship rebuild",
