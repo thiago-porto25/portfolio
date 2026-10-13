@@ -21,7 +21,7 @@ export default function Intro({ content }: Props) {
               href={cta.href}
               className={
                 i === 0
-                  ? "rounded-full bg-accent px-5 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90"
+                  ? "rounded-full bg-wine px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
                   : "rounded-full border border-gray-400 px-5 py-2 text-sm font-semibold text-gray-200 transition-colors hover:border-white hover:text-white"
               }
             >

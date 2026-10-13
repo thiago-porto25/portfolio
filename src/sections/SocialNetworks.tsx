@@ -33,7 +33,7 @@ export default function SocialNetworks({ content }: Props) {
           <div className="flex flex-wrap justify-center gap-3 pt-2">
             <a
               href={`mailto:${content.email}`}
-              className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90"
+              className="rounded-full bg-wine px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               {content.email}
             </a>
