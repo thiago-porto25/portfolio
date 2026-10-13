@@ -34,7 +34,7 @@ export const content = {
         bullets: [
           {
             lead: "Frontend leadership",
-            text: "Led the frontend team on Agriness, a platform used by thousands of agriculture companies, setting the standards for best practices and code quality and implementing internationalization to serve multiple languages.",
+            text: "Led the frontend team on Agriness, a platform used by thousands of pig farms, setting the standards for best practices and code quality and implementing internationalization to serve multiple languages.",
           },
           {
             lead: "AI-assisted delivery",
