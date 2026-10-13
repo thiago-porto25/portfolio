@@ -1,3 +1,7 @@
+import agriness from "../assets/projects/agriness.webp";
+import comgas from "../assets/projects/comgas.webp";
+import hsl from "../assets/projects/hsl.webp";
+
 export const content = {
   nav: {
     skip: "Skip to content",
@@ -122,20 +126,48 @@ export const content = {
   },
   projects: {
     title: "Selected Projects",
-    projectsList: [
+    featured: [
+      {
+        name: "Agriness S4",
+        role: "Frontend Engineer · Frontend Lead",
+        description:
+          "Real-time management platform for swine production, used by farms to track performance. I led the frontend team, set the code standards, built internationalization and introduced an AI-assisted workflow.",
+        stack: ["React", "TypeScript"],
+        image: agriness,
+        alt: "Agriness S4 landing page: swine production management in real time",
+        link: "https://agriness.com/s4/",
+        linkLabel: "Visit Agriness S4",
+      },
       {
         name: "Paciente Sírio-Libanês",
+        role: "Frontend Engineer",
+        description:
+          "Patient app of the Sírio-Libanês hospital. I introduced over-the-air deployments, built the native bridge to the Meridian SDK for indoor routing and delivered scheduling for exams, appointments and telemedicine.",
+        stack: ["React Native", "TypeScript"],
+        image: hsl,
+        alt: "Three screens of the Paciente Sírio-Libanês app: welcome, appointment scheduling and exam results",
         link: "https://play.google.com/store/apps/details?id=br.org.hsl.siriolibanes",
+        linkLabel: "View on Google Play",
       },
+      {
+        name: "Comgás Virtual",
+        role: "Frontend Engineer",
+        description:
+          "Self-service portal of Comgás, a natural gas distributor. I led the frontend of the gas contracting flow, a key funnel for turning visitors into new customers.",
+        stack: ["React", "TypeScript"],
+        image: comgas,
+        alt: "Comgás Virtual home page with the customer services and bills area",
+        link: "https://virtual.comgas.com.br/contratecasas",
+        linkLabel: "Visit Comgás Virtual",
+      },
+    ],
+    moreTitle: "More projects",
+    projectsList: [
       {
         name: "Minim-ui",
         link: "https://www.npmjs.com/package/@thiagoporto/minim-ui",
       },
       { name: "ChatRandom", link: "https://chat-random.vercel.app/" },
-      {
-        name: "Comgás Virtual",
-        link: "https://virtual.comgas.com.br/contratecasas",
-      },
       { name: "D3", link: "https://history.d3.do/" },
       { name: "Postr", link: "https://postr-react-app.web.app/" },
     ],
