@@ -1,5 +1,9 @@
 import {
   AmbientLight,
+  BufferGeometry,
+  ColorManagement,
+  LinearSRGBColorSpace,
+  Material,
   Mesh,
   MeshBasicMaterial,
   MeshStandardMaterial,
@@ -22,12 +26,12 @@ import { useEffect, useRef } from "react";
 const SCROLL_STEP = 20;
 
 // Integral of (rate * u) over [from, to], clamped to the current depth u.
-const seg = (u, from, to, rate) => {
+const seg = (u: number, from: number, to: number, rate: number) => {
   const m = Math.min(Math.max(u, from), to);
   return (rate * (m * m - from * from)) / 2;
 };
 
-const cameraPose = u => {
+const cameraPose = (u: number) => {
   const k = 1 / SCROLL_STEP;
   return {
     z:
@@ -43,7 +47,13 @@ const cameraPose = u => {
   };
 };
 
-const makeMesh = (geometry, color, metalness, roughness, [x, y, z]) => {
+const makeMesh = (
+  geometry: BufferGeometry,
+  color: number,
+  metalness: number,
+  roughness: number,
+  [x, y, z]: [number, number, number]
+) => {
   const mesh = new Mesh(
     geometry,
     new MeshStandardMaterial({ color, metalness, roughness })
@@ -53,10 +63,11 @@ const makeMesh = (geometry, color, metalness, roughness, [x, y, z]) => {
 };
 
 export default function Background() {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return undefined;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     let renderer;
@@ -68,6 +79,9 @@ export default function Background() {
       canvas.style.display = "none";
       return undefined;
     }
+    // The scene was tuned before three's color management existed
+    ColorManagement.enabled = false;
+    renderer.outputColorSpace = LinearSRGBColorSpace;
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -80,14 +94,15 @@ export default function Background() {
     );
     camera.position.z = 30;
 
-    // Lights
-    const pointLight = new PointLight(0x555555, 1);
+    // Lights: three >= r155 uses physical units, so scale by PI and drop the
+    // distance decay to keep the look the scene was designed with
+    const pointLight = new PointLight(0x555555, Math.PI, 0, 0);
     pointLight.position.set(15, 15, 15);
 
-    const pointLight2 = new PointLight(0x999999, 1);
+    const pointLight2 = new PointLight(0x999999, Math.PI, 0, 0);
     pointLight2.position.set(60, 50, -80);
 
-    scene.add(new AmbientLight(0xffffff, 1), pointLight, pointLight2);
+    scene.add(new AmbientLight(0xffffff, Math.PI), pointLight, pointLight2);
 
     // Shapes
     const hex = makeMesh(
@@ -126,7 +141,9 @@ export default function Background() {
     Array.from({ length: 150 }, () => {
       const star = new Mesh(starGeometry, starMaterial);
       star.position.set(
-        ...Array.from({ length: 3 }, () => MathUtils.randFloatSpread(100))
+        MathUtils.randFloatSpread(100),
+        MathUtils.randFloatSpread(100),
+        MathUtils.randFloatSpread(100)
       );
       return star;
     }).forEach(star => scene.add(star));
@@ -185,8 +202,9 @@ export default function Background() {
       document.removeEventListener("visibilitychange", onVisibility);
       reducedMotion.removeEventListener("change", start);
       scene.traverse(obj => {
-        if (obj.geometry) obj.geometry.dispose();
-        if (obj.material) obj.material.dispose();
+        if (!(obj instanceof Mesh)) return;
+        obj.geometry.dispose();
+        (obj.material as Material).dispose();
       });
       renderer.dispose();
     };

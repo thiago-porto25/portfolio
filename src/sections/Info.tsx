@@ -1,12 +1,15 @@
 import { FadeUp } from "../components";
 import Atom from "../components/Atom";
+import type { Content } from "../utils/content";
 
-export default function Info({ content }) {
+type Props = { content: Content["info"] };
+
+export default function Info({ content }: Props) {
   return (
     <section aria-label="info section" className="section-base">
-      <h2 className="text-5xl text-type-title">
+      <h2 className="text-type-title text-5xl">
         <span
-          className="flex justify-center items-start animate-spin-slow"
+          className="flex animate-spin-slow items-start justify-center"
           aria-label="rotating atom emoji"
         >
           <FadeUp>
@@ -15,15 +18,15 @@ export default function Info({ content }) {
         </span>
       </h2>
 
-      <div className="px-8 w-full whitespace-pre-wrap md:px-0 md:w-3/6 text-type-base">
+      <div className="text-type-base w-full whitespace-pre-wrap px-8 md:w-3/6 md:px-0">
         <FadeUp>{content.text}</FadeUp>
       </div>
 
-      <div className="px-8 -mt-3 w-full md:px-0 md:w-3/6 text-type-base">
+      <div className="text-type-base -mt-3 w-full px-8 md:w-3/6 md:px-0">
         <FadeUp>
           {content.cta}{" "}
           <a
-            className="hover:text-gray-400 underline transition-colors"
+            className="underline transition-colors hover:text-gray-400"
             href={content.ctaLink}
             target="_blank"
             rel="noreferrer"

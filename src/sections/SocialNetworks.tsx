@@ -1,16 +1,11 @@
-import { useState } from "react";
-
 import { socialsComponents } from "../utils/socials";
 
 import { FadeUp } from "../components";
+import type { Content } from "../utils/content";
 
-export default function SocialNetworks({ content }) {
-  const [socials, setSocials] = useState([]);
+type Props = { content: Content["social"] };
 
-  useState(() => {
-    setSocials(socialsComponents);
-  }, [socialsComponents]);
-
+export default function SocialNetworks({ content }: Props) {
   return (
     <section className="section-base">
       <h3 className="text-type-title">
@@ -18,16 +13,16 @@ export default function SocialNetworks({ content }) {
       </h3>
       <FadeUp>
         <ul
-          className="flex gap-10 list-none"
+          className="flex list-none gap-10"
           aria-label="Social Network links list"
         >
-          {socials.map(logo => (
+          {socialsComponents.map(logo => (
             <li
               className="transition-transform hover:-translate-y-2"
               key={logo.link.slice(-10)}
             >
               <a
-                className="transition-all fill-gray-300 hover:fill-gray-400 text-type-base"
+                className="text-type-base fill-gray-300 transition-all hover:fill-gray-400"
                 href={logo.link}
                 rel="noopener noreferrer"
                 target="_blank"

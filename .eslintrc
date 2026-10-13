@@ -5,9 +5,9 @@
   },
 
   "extends": [
-    "react-app",
-    "react-app/jest",
     "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
     "prettier",
     "plugin:react/jsx-runtime",
@@ -15,6 +15,14 @@
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended"
   ],
+
+  "parser": "@typescript-eslint/parser",
+
+  "settings": {
+    "import/resolver": { "typescript": {} }
+  },
+
+  "ignorePatterns": ["dist", ".vite-react-ssg-temp"],
 
   "parserOptions": {
     "ecmaFeatures": {
@@ -34,10 +42,9 @@
 
   "rules": {
     //normal rules
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "arrow-parens": 0,
     "semi": 1,
-    "no-unused-vars": "warn",
     "no-console": "off",
     "func-names": "off",
     "no-process-exit": "off",
@@ -47,9 +54,14 @@
     "react/prop-types": "off",
     "react/no-array-index-key": "off",
     "import/extensions": 0,
+    "react/require-default-props": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-use-before-define": "off",
+    "react/function-component-definition": "off",
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/*.test.js", "**/setupTests.js"] }
+      { "devDependencies": ["**/*.test.tsx", "**/setupTests.ts", "vite.config.ts"] }
     ],
     //prettier
     "prettier/prettier": [

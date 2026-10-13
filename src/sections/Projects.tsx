@@ -1,6 +1,9 @@
 import { FadeUp } from "../components";
+import type { Content } from "../utils/content";
 
-export default function Projects({ content }) {
+type Props = { content: Content["projects"] };
+
+export default function Projects({ content }: Props) {
   return (
     <section aria-label="projects section" className="section-base">
       <h2 className="text-type-title">
@@ -8,11 +11,11 @@ export default function Projects({ content }) {
       </h2>
 
       <FadeUp>
-        <ul className="flex flex-col gap-6 list-none">
+        <ul className="flex list-none flex-col gap-6">
           {content.projectsList.map(project => (
             <li
               key={project.link}
-              className="relative z-10 list-decimal text-gray-300 hover:text-gray-400 transition-all"
+              className="relative z-10 list-decimal text-gray-300 transition-all hover:text-gray-400"
             >
               <a
                 className="block text-2xl hover:animate-wiggle motion-reduce:hover:animate-none"

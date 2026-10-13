@@ -1,12 +1,15 @@
 import { Arrow } from "../components";
+import type { Content } from "../utils/content";
 
-export default function Intro({ content }) {
+type Props = { content: Content["intro"] };
+
+export default function Intro({ content }: Props) {
   return (
     <section
       aria-label="Intro Section"
-      className="flex relative justify-center items-center h-screen animate-initial motion-reduce:animate-none"
+      className="relative flex h-screen animate-initial items-center justify-center motion-reduce:animate-none"
     >
-      <h1 className="px-4 pb-8 h-fit text-4xl font-semibold text-center md:text-5xl text-type-title">
+      <h1 className="text-type-title h-fit px-4 pb-8 text-center text-4xl font-semibold md:text-5xl">
         {content.title}
       </h1>
 

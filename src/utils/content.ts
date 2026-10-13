@@ -37,3 +37,5 @@ export const content = {
     link: "mailto:thiagoportodev@gmail.com",
   },
 };
+
+export type Content = typeof content;

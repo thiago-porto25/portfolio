@@ -2,27 +2,29 @@
 
 Live: [www.thiagoportodev.me](https://www.thiagoportodev.me)
 
-A 3D portfolio built with React, Three.js, Framer Motion and Tailwind CSS.
+A 3D portfolio built with React, TypeScript, Vite, Three.js, Framer Motion and Tailwind CSS. The page is pre-rendered to static HTML at build time (`vite-react-ssg`) and hydrated on the client.
 
 ## Running locally
 
 ```bash
 npm install
-npm start      # dev server on http://localhost:3000
-npm test       # unit tests
+npm run dev        # dev server on http://localhost:5173
+npm test           # unit tests (Vitest)
 npm run lint
-npm run build  # production build in ./build
+npm run typecheck
+npm run build      # pre-rendered static build in ./dist
+npm run preview    # serve ./dist locally
 ```
 
 ## How it works
 
-- `src/utils/content.js` holds all the text and links shown on the page.
-- `src/components/Background.jsx` is the Three.js scene. It is lazy-loaded, follows the scroll position, pauses when the tab is hidden, and stays still when the user prefers reduced motion or WebGL is unavailable.
+- `src/utils/content.ts` holds all the text and links shown on the page.
+- `src/components/Background.tsx` is the Three.js scene. It is lazy-loaded, follows the scroll position, pauses when the tab is hidden, and stays still when the user prefers reduced motion or WebGL is unavailable.
 - `src/sections/*` are the page sections, composed in `src/pages/Home.jsx`.
 
 ## Deploy
 
-Deployed on [Vercel](https://vercel.com) through its Git integration: every push to `main` builds and publishes automatically.
+Deployed on [Vercel](https://vercel.com) through its Git integration: every push to `main` builds (`npm run build`) and publishes `dist/` automatically.
 
 ## License
 
