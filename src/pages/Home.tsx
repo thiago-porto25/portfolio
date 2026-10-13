@@ -3,7 +3,6 @@ import { ClientOnly } from "vite-react-ssg/single-page";
 
 import {
   Experience,
-  Info,
   Intro,
   Projects,
   Skills,
@@ -29,7 +28,6 @@ export default function Home() {
       <Navbar content={content.nav} />
       <main id="main" className="absolute z-10">
         <Intro content={content.intro} />
-        <Info content={content.info} />
         <Projects content={content.projects} />
         <Experience content={content.experience} />
         <Skills content={content.skills} />

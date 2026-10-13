@@ -14,6 +14,7 @@ export default function Intro({ content }: Props) {
           {content.title}
         </h1>
         <p className="text-type-base">{content.subtitle}</p>
+        <p className="max-w-md text-center text-gray-300">{content.pitch}</p>
         <div className="flex gap-3 pt-2">
           {content.ctas.map((cta, i) => (
             <a

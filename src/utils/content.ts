@@ -6,7 +6,6 @@ export const content = {
   nav: {
     skip: "Skip to content",
     links: [
-      { label: "About", href: "#about" },
       { label: "Projects", href: "#projects" },
       { label: "Experience", href: "#experience" },
       { label: "Skills", href: "#skills" },
@@ -16,13 +15,12 @@ export const content = {
   intro: {
     title: "Hi! I'm Thiago Porto!",
     subtitle: "Frontend Engineer",
+    pitch:
+      "I build fast, polished React and React Native interfaces, and work with AI agents while staying in charge of architecture, tests and code review.",
     ctas: [
       { label: "View projects", href: "#projects" },
       { label: "Contact me", href: "#contact" },
     ],
-  },
-  info: {
-    text: "I'm a Frontend Engineer specialized in the React ecosystem. I build responsive, mobile-first, performant and SEO-friendly applications for the web and for mobile.\n\nMy day-to-day is React, TypeScript and Next.js, plus React Native for mobile, with Redux for state, Storybook for component libraries, Microfrontends to scale across teams, and Jest and Cypress to keep it all tested.\n\nI also work with AI agents as part of my development workflow: they speed up the repetitive parts while I stay in charge of architecture, tests and code review.\n\nI like turning designs into fast, polished interfaces.",
   },
   experience: {
     title: "Experience",
