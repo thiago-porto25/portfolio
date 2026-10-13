@@ -29,15 +29,11 @@ export const content = {
         period: "Jan 2025 – Present",
         bullets: [
           {
-            lead: "Agriness",
-            text: "Led the frontend team on a platform used by thousands of agriculture companies, setting the standards for best practices and code quality.",
+            lead: "Frontend leadership",
+            text: "Led the frontend team on Agriness, a platform used by thousands of agriculture companies, setting the standards for best practices and code quality and implementing internationalization to serve multiple languages.",
           },
           {
-            lead: "Internationalization",
-            text: "Made the product available in multiple languages.",
-          },
-          {
-            lead: "AI workflow",
+            lead: "AI-assisted delivery",
             text: "Created the AI Skills and CLAUDE.md that guide agents in the codebase, making frontend deliveries with AI 70% faster.",
           },
           {
@@ -52,28 +48,16 @@ export const content = {
         period: "Dec 2022 – Jan 2025",
         bullets: [
           {
-            lead: "Comgás Virtual",
-            text: "Led the frontend implementation of the gas contracting flow, a key funnel for converting visitors into new customers.",
+            lead: "Conversion funnel",
+            text: "Led the frontend implementation of the gas contracting flow in Comgás Virtual, a key funnel for converting visitors into new customers.",
           },
           {
-            lead: "Sírio-Libanês · OTA",
-            text: "Introduced over-the-air deployments to the React Native patient app: bug fixes and JavaScript-only features now reach users without waiting on slow app store review cycles.",
+            lead: "Hospital patient app",
+            text: "On the Sírio-Libanês React Native app, introduced over-the-air deployments so fixes and JavaScript-only features skip slow app store reviews, built a native bridge to the Meridian SDK for indoor routing, and delivered scheduling for exams, appointments and telemedicine, adding a new revenue channel for the hospital.",
           },
           {
-            lead: "Sírio-Libanês · Indoor routing",
-            text: "Built a native bridge to the Meridian SDK, so patients can easily find their way around the hospital.",
-          },
-          {
-            lead: "Sírio-Libanês · Scheduling",
-            text: "Delivered scheduling for exams, appointments and telemedicine, adding a new revenue channel for the hospital.",
-          },
-          {
-            lead: "Mentoring",
-            text: "Mentored other frontend developers and guided architectural decisions.",
-          },
-          {
-            lead: "Testing",
-            text: "Built a testing culture with unit and E2E tests (Detox, Gherkin), raising coverage to 85% and making releases more reliable.",
+            lead: "Quality and mentoring",
+            text: "Mentored other frontend developers, guided architectural decisions and built a testing culture with unit and E2E tests (Detox, Gherkin), raising coverage to 85%.",
           },
         ],
       },
