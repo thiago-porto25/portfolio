@@ -19,11 +19,11 @@ export default function Info({ content }: Props) {
         </span>
       </h2>
 
-      <div className="text-type-base w-full whitespace-pre-wrap px-8 md:w-3/6 md:px-0">
+      <div className="text-type-base w-full whitespace-pre-wrap rounded-2xl bg-black/50 px-8 py-4 md:w-3/6 md:px-6">
         <FadeUp>{content.text}</FadeUp>
       </div>
 
-      <div className="text-type-base -mt-3 w-full px-8 md:w-3/6 md:px-0">
+      <div className="text-type-base -mt-3 w-full rounded-2xl bg-black/50 px-8 py-4 md:w-3/6 md:px-6">
         <FadeUp>
           {content.cta}{" "}
           <a

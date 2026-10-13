@@ -87,7 +87,7 @@ Itens marcados **[INPUT]** dependem de conteúdo que só o Thiago tem.
 **Inputs necessários:** foto (opcional), cidade/disponibilidade (CLT/PJ/remoto), 2–4 empresas com cargo e período, 2–3 conquistas mensuráveis por empresa, lista de skills, PDF do currículo, 
 
 **Tarefas**
-1. **Hero:** nome + "Front-end Engineer · React / TypeScript" + 2 botões ("Ver projetos" → `#projects`, "Contato" → `#contact`). Manter o 3D ao fundo.
+1. **Hero:** nome + "Frontend Engineer" + 2 botões ("Ver projetos" → `#projects`, "Contato" → `#contact`). Manter o 3D ao fundo.
 2. **Navbar** simples com âncoras (Sobre, Projetos, Contato) e `scroll-behavior: smooth` (respeitando reduced-motion). Skip link "Pular para o conteúdo".
 3. **Sobre:** texto curto e factual (sem "performant, scalable, SEO friendly" genérico), localização, disponibilidade, foto se houver.
 4. **Experiência:** lista cronológica (empresa, cargo, período, 2–3 bullets com impacto).
