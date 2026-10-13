@@ -15,7 +15,7 @@ export default function Projects({ content }) {
               className="relative z-10 list-decimal text-gray-300 hover:text-gray-400 transition-all"
             >
               <a
-                className="block text-2xl hover:animate-wiggle"
+                className="block text-2xl hover:animate-wiggle motion-reduce:hover:animate-none"
                 rel="noopener noreferrer"
                 href={project.link}
                 target="_blank"
