@@ -23,6 +23,11 @@ export const content = {
     ctaAnchor: "Let's talk!",
     ctaLink: "mailto:thiagoportodev@gmail.com",
   },
+  impact: [
+    { value: "70%", label: "faster AI-assisted frontend delivery" },
+    { value: "90%", label: "unit + E2E test coverage" },
+    { value: "1,000s", label: "of agriculture companies on Agriness" },
+  ],
   experience: {
     title: "Experience",
     jobs: [
@@ -31,10 +36,22 @@ export const content = {
         company: "NTConsult",
         period: "Jan 2025 – Present",
         bullets: [
-          "Led the frontend team on Agriness, a platform used by thousands of agriculture companies, setting the standards for best practices and code quality.",
-          "Implemented internationalization, making the product available in multiple languages.",
-          "Created the AI Skills and CLAUDE.md that guide agents in the codebase, making frontend deliveries with AI 70% faster.",
-          "Delivered the new version of the company's flagship software, rebuilt from scratch with React and its ecosystem, raising user satisfaction by 85% over the outdated, bug-prone legacy version.",
+          {
+            lead: "Agriness",
+            text: "Led the frontend team on a platform used by thousands of agriculture companies, setting the standards for best practices and code quality.",
+          },
+          {
+            lead: "Internationalization",
+            text: "Made the product available in multiple languages.",
+          },
+          {
+            lead: "AI workflow",
+            text: "Created the AI Skills and CLAUDE.md that guide agents in the codebase, making frontend deliveries with AI 70% faster.",
+          },
+          {
+            lead: "Flagship rebuild",
+            text: "Delivered the new version of the company's flagship software, rebuilt from scratch with React and its ecosystem, raising user satisfaction by 85% over the outdated, bug-prone legacy version.",
+          },
         ],
       },
       {
@@ -42,12 +59,30 @@ export const content = {
         company: "Igma",
         period: "Dec 2022 – Jan 2025",
         bullets: [
-          "Led the frontend implementation of the gas contracting flow in Comgás Virtual, a key funnel for converting visitors into new customers.",
-          "On the Sírio-Libanês patient app (React Native), introduced over-the-air deployments: bug fixes and JavaScript-only features now reach users without waiting on slow app store review cycles.",
-          "Built a native bridge to the Meridian SDK, bringing indoor routing into the app so patients can easily find their way around the hospital.",
-          "Delivered the scheduling features for exams, appointments and telemedicine, adding a new revenue channel for the hospital.",
-          "Mentored other frontend developers and guided architectural decisions.",
-          "Built a testing culture with unit and E2E tests (Detox, Gherkin), raising coverage to 85% and making releases more reliable.",
+          {
+            lead: "Comgás Virtual",
+            text: "Led the frontend implementation of the gas contracting flow, a key funnel for converting visitors into new customers.",
+          },
+          {
+            lead: "Sírio-Libanês · OTA",
+            text: "Introduced over-the-air deployments to the React Native patient app: bug fixes and JavaScript-only features now reach users without waiting on slow app store review cycles.",
+          },
+          {
+            lead: "Sírio-Libanês · Indoor routing",
+            text: "Built a native bridge to the Meridian SDK, so patients can easily find their way around the hospital.",
+          },
+          {
+            lead: "Sírio-Libanês · Scheduling",
+            text: "Delivered scheduling for exams, appointments and telemedicine, adding a new revenue channel for the hospital.",
+          },
+          {
+            lead: "Mentoring",
+            text: "Mentored other frontend developers and guided architectural decisions.",
+          },
+          {
+            lead: "Testing",
+            text: "Built a testing culture with unit and E2E tests (Detox, Gherkin), raising coverage to 85% and making releases more reliable.",
+          },
         ],
       },
       {
@@ -55,9 +90,18 @@ export const content = {
         company: "D3 Company",
         period: "Dec 2021 – Dec 2022",
         bullets: [
-          "Rebuilt the company website from scratch with React and microfrontends, delivered in 3 months.",
-          "Introduced automated E2E tests with Cypress and Cucumber, with scenarios written in plain language, and raised unit and E2E test coverage to 90%.",
-          "Led a Redux refactor of state management, improving performance and predictability.",
+          {
+            lead: "Website rebuild",
+            text: "Rebuilt the company website from scratch with React and microfrontends, delivered in 3 months.",
+          },
+          {
+            lead: "Testing",
+            text: "Introduced automated E2E tests with Cypress and Cucumber, with scenarios written in plain language, and raised unit and E2E test coverage to 90%.",
+          },
+          {
+            lead: "Redux refactor",
+            text: "Led a refactor of state management, improving performance and predictability.",
+          },
         ],
       },
     ],

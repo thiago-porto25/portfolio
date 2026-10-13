@@ -21,10 +21,16 @@ export default function Experience({ content }: Props) {
               <h3 className="text-xl text-gray-200">
                 {job.role} · {job.company}
               </h3>
-              <p className="text-sm text-gray-400">{job.period} · Remote</p>
+              <p className="text-base text-gray-300">{job.period} · Remote</p>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-gray-300">
                 {job.bullets.map(bullet => (
-                  <li key={bullet}>{bullet}</li>
+                  <li key={bullet.lead}>
+                    <strong className="font-semibold text-gray-100">
+                      {bullet.lead}
+                    </strong>
+                    {" — "}
+                    {bullet.text}
+                  </li>
                 ))}
               </ul>
             </FadeUp>

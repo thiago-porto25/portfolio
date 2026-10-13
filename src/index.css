@@ -16,7 +16,7 @@
   }
 
   .section-base {
-    @apply flex flex-col gap-12 justify-center items-center py-80 w-screen;
+    @apply flex flex-col gap-12 justify-center items-center py-24 w-screen;
   }
 }
 
