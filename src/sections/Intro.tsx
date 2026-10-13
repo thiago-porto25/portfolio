@@ -9,7 +9,7 @@ export default function Intro({ content }: Props) {
       aria-label="Intro Section"
       className="relative flex h-screen items-center justify-center"
     >
-      <div className="text-panel flex flex-col items-center gap-4 px-8">
+      <div className="text-panel mx-4 flex flex-col items-center gap-4 px-8">
         <h1 className="text-type-title h-fit text-center text-4xl font-semibold md:text-5xl">
           {content.title}
         </h1>

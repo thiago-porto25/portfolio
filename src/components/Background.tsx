@@ -97,6 +97,14 @@ export default function Background() {
       1000
     );
     camera.position.z = 30;
+    // Portrait screens crop the view horizontally, which makes the shapes
+    // look huge; widen the vertical FOV to keep the horizontal one constant
+    const fitCamera = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.fov = Math.min(50 / Math.min(camera.aspect, 1), 100);
+      camera.updateProjectionMatrix();
+    };
+    fitCamera();
 
     // Lights: three >= r155 uses physical units, so scale by PI and drop the
     // distance decay to keep the look the scene was designed with
@@ -142,7 +150,7 @@ export default function Background() {
     // Stars share one geometry and material
     const starGeometry = new SphereGeometry(0.1, 15, 15);
     const starMaterial = new MeshBasicMaterial({ color: 0xeeeeee });
-    Array.from({ length: 150 }, () => {
+    Array.from({ length: window.innerWidth < 640 ? 80 : 150 }, () => {
       const star = new Mesh(starGeometry, starMaterial);
       star.position.set(
         MathUtils.randFloatSpread(100),
@@ -187,8 +195,7 @@ export default function Background() {
 
     const onResize = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
+      fitCamera();
       if (!frame) renderer.render(scene, camera);
     };
 
